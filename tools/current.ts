@@ -1,4 +1,4 @@
-import { BrowserContext, Page } from 'playwright-core';
+import { BrowserContext, chromium, Page } from 'playwright';
 
 export default class Current {
   private static currentPage: Page;
@@ -9,16 +9,19 @@ export default class Current {
   }
 
   public static async startContext(url: string) {
-    this.currentPage = page;
-    await this.currentPage.setViewportSize({
-      width: 1440,
-      height: 819,
+    this.currentBrowserContext = await chromium.launchPersistentContext('', {
+      headless: false,
     });
+    this.currentPage = await this.currentBrowserContext.newPage();
+    await this.currentPage.setViewportSize({
+      width: 1920,
+      height: 1080,
+    });
+
     await this.currentPage.goto(url);
-    this.currentBrowserContext = context;
   }
 
   public static async closeContext() {
-    await this.currentBrowserContext.close();
+    await this.currentBrowserContext?.close();
   }
 }

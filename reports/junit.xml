@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Smoke Testing" tests="1" failures="0" errors="0" time="4.46">
-  <testsuite name="smoke-tests\homepage-tests.ts" errors="0" failures="0" skipped="0" timestamp="2021-07-21T19:46:41" time="4.178" tests="1">
-    <testcase classname="ENSEK: Home page navigation Home page loads" name="ENSEK: Home page navigation Home page loads" time="0.024">
+<testsuites name="Smoke Testing" tests="1" failures="0" errors="0" time="5.835">
+  <testsuite name="smoke-tests\homepage-tests.ts" errors="0" failures="0" skipped="0" timestamp="2021-07-21T21:46:09" time="5.001" tests="1">
+    <testcase classname="ENSEK: Home page navigation Home page loads" name="ENSEK: Home page navigation Home page loads" time="0.021">
     </testcase>
   </testsuite>
 </testsuites>
